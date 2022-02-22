@@ -11,7 +11,6 @@ impostos deduzidos do salário.
 ## Funcionalidades
 
 1. Adição de um empregado.<br>
-   > - dfgfdg
 2. Remoção de um empregado.
 3. Lançar um carte de ponto.
 4. Lançar Resultado de venda.   
