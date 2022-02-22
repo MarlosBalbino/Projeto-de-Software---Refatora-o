@@ -24,8 +24,7 @@ class Schedule:
             data.DataBaseManager.writeDB('schedule')
 
             print('\nPagamento agendado com sucesso.\n')
-            system('pause')
-            return 1
+            data.done = 1
         system('pause')
 
     @staticmethod
@@ -34,7 +33,7 @@ class Schedule:
         print(f"{15 * '='} Criar nova agenda {15 * '='}")
 
         newSchedule = FillSchedule()
-        if newSchedule.list() == 1:
+        if newSchedule.listSchedules() == 1:
             PrintData.printScheduleList()
 
         newSchedule.setSchedule()
@@ -50,6 +49,6 @@ class Schedule:
 
         print('Agenda criada com sucesso\n')
         system('pause')
-        return 1
+        data.done = 1
 
 

@@ -1,9 +1,9 @@
 from employee.salaried import Salaried
 from management.paycheck.paycheck import Paycheck
-from employee.PaymentInterface import PaymentInterface
+from employee.SalaryInterface import SalaryInterface
 
 
-class Commissioned(Salaried, PaymentInterface):
+class Commissioned(Salaried, SalaryInterface):
     """representa empregado comissionado"""
 
     # estende o método __init__ da super classe
@@ -43,7 +43,7 @@ class Commissioned(Salaried, PaymentInterface):
     def __str__(self):
         return f"Commissioned({self._repr()})"
 
-    def calcPayment(self):
+    def calculateSalary(self):
         self.grossSalary = self.getSalary() + self.getPeriodCommission()
 
         paycheck = Paycheck(self.name, self.id, self.grossSalary, self.payment, commission=self.commission,

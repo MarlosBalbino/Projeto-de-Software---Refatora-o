@@ -1,4 +1,4 @@
-from .interface import CommandInterface
+from .CommandInterface import CommandInterface
 from management.serviceFee import Service
 
 

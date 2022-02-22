@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
 
-class PaymentInterface(ABC):
+class SalaryInterface(ABC):
 
     @abstractmethod
-    def calcPayment(self):
+    def calculateSalary(self):
         pass

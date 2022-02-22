@@ -29,9 +29,8 @@ class Service:
                 data.dynamicSyndicateDB[syndicateId] = syndicateEmp
                 data.DataBaseManager.writeDB('syndicate')
                 print('\nTaxa de serviço cadastrada.\n')
-                system('pause')
-                return 1
+                data.done = 1
             else:
                 print('Empregado não possui vinculo com o sindicato\n')
-            system('pause')
+        system('pause')
 

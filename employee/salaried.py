@@ -1,9 +1,9 @@
 from employee.employee_ import __Employee
 from management.paycheck.paycheck import Paycheck
-from employee.PaymentInterface import PaymentInterface
+from employee.SalaryInterface import SalaryInterface
 
 
-class Salaried(__Employee, PaymentInterface):
+class Salaried(__Employee, SalaryInterface):
     """representa empregado salariado"""
 
     # estende o método __init__ da super classe
@@ -32,7 +32,7 @@ class Salaried(__Employee, PaymentInterface):
     def __str__(self):
         return f"Salaried({self._repr()})"
 
-    def calcPayment(self):
+    def calculateSalary(self):
 
         self.grossSalary = self.salary
         paycheck = Paycheck(self.name, self.id, self.grossSalary, self.payment)

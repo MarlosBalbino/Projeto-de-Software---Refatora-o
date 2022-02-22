@@ -61,7 +61,7 @@ class TimeCard:
                 data.DataBaseManager.writeDB('timecards')
                 print('Cartão de ponto adicionado com sucesso!!\n')
                 system('pause')
-                return 1
+                data.done = 1
 
             except:
                 print('Não foi possível lançar cartão de ponto.\n')
@@ -84,6 +84,7 @@ class TimeCard:
             employee.setWorkingHours(hours)
             data.dynamicDataBase[Id] = employee
             data.DataBaseManager.writeDB('employees')
+            data.done = 1
         system('pause')
 
     @staticmethod
@@ -103,4 +104,5 @@ class TimeCard:
             employee.setExtraWorkingHours(extra_h)
             data.dynamicDataBase[Id] = employee
             data.DataBaseManager.writeDB('employees')
+            data.done = 1
         system('pause')

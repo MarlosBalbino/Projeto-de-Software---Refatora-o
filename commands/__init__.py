@@ -1,4 +1,4 @@
-from .interface import CommandInterface
+from .CommandInterface import CommandInterface
 from .RemoveEmployeeCommand import RemoveEmployeeCommand
 from .AddEmployeeCommand import AddEmployeeCommand
 from .UpdateEmployeeComand import UpdateEmployeeCommand

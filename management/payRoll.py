@@ -1,7 +1,6 @@
-from dataBase import data as dt
 from employee import *
+from dataBase import data as dt
 from management.extraModules.mycalendar import Calendar
-
 from management.extraModules.findInSyndicate import FindSyndicate
 from os import system
 
@@ -26,7 +25,7 @@ class PayRoll:
             serviceFee = syndicate.getServiceFee()
             unionFee = syndicate.getUnionFee()
 
-        paycheck = employee.calcPayment()
+        paycheck = employee.calculateSalary()
         grossSalary = employee.getGrossSalary()
 
         serviceDiscount = (serviceFee/100) * grossSalary
@@ -34,6 +33,7 @@ class PayRoll:
         INSSDiscount = (cls.INSS/100) * grossSalary
         FGTSDiscount = (cls.FGTS/100) * grossSalary
         totalDiscounts = serviceDiscount + unionDiscount + INSSDiscount + FGTSDiscount
+
         netSalary = grossSalary - totalDiscounts
 
         paycheck.setRates(cls.FGTS, cls.INSS, unionFee, serviceFee)

@@ -73,7 +73,7 @@ class FillSchedule:
         self.__description = input('\nDigite uma descrição para a agenda (em string):\n')
 
     @staticmethod
-    def list():
+    def listSchedules():
         while True:
             opt = eval(input('\nDeseja listar as agendas existentes?\n'
                              'Digite: 1 - Sim.'

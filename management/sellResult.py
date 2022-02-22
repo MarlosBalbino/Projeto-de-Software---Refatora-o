@@ -39,7 +39,7 @@ class SellResult:
 
                 print('Resultado de venda adicionado com sucesso!!\n')
                 system('pause')
-                return 1
+                data.done = 1
 
             except:
                 print('Não foi possível lançar resultado de venda!!\n')
